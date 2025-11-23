@@ -6,6 +6,8 @@ import { PayBlock } from "@/components/Pay";
 import { WalletAuth } from "@/components/WalletAuth";
 import { Login } from "@/components/Login";
 
+import Link from "next/link";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -60,6 +62,20 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Payment</h2>
           <PayBlock />
         </section>
+
+<section className="mt-8 border-t border-zinc-800 pt-4">
+  <h2 className="text-lg font-semibold mb-2">Sk8Habit</h2>
+  <p className="text-sm text-zinc-400 mb-3">
+    Track your skate habits inside this mini app.
+  </p>
+  <Link
+    href="/habit"
+    className="inline-flex items-center justify-center rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium hover:bg-zinc-900"
+  >
+    Open Habit Tracker
+  </Link>
+</section>
+
       </div>
     </main>
   );
